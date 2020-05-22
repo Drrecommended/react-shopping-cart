@@ -1,2 +1,44 @@
-html {box-sizing:border-box;}
-*, *::before, *::after {box-sizing:inherit;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clothes-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    min-height: 600px;
+}
+
+.buy-button {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.title {
+    text-overflow: ellipsis;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+.header {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header .products {
+    float: left;
+    margin: 8px 0 0;
+}
+
+.header .sort {
+    float: right;
+}
