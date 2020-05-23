@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
-.clothes-box {
+.clothesChest {
     display: flex;
     flex-wrap: wrap;
     width: 85%;
-    min-height: 600px;
+}
+
+.clothesBoxHeader {
+    width: 85%; 
 }
 
 .buy-button {

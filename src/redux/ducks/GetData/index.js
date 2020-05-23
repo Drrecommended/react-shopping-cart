@@ -5,13 +5,12 @@ import axios from 'axios'
 const GRAB_CLOTHES = "example/GRAB_CLOTHES"
 
 // 3. initial state
-const initialState = {
+const clothesState = {
   clothingData: []
 }
 
 // 4. reducer
-export default (state = initialState, action) => {
-  console.log(action)
+export default (state = clothesState, action) => {
   switch (action.type) {
     case GRAB_CLOTHES:
       return { ...state, clothingData: action.payload }
