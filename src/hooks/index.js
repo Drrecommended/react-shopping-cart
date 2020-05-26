@@ -1,2 +1,2 @@
-export { useClothes } from "../redux/ducks/GetData"
-export { useCart } from "../redux/ducks/GetCart"
+export { useClothes } from "../redux/ducks/Products"
+export { useCart } from "../redux/ducks/Cart"

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
 import "../styles/App.css"
-import { useClothes } from '../hooks'
+import { useClothes, useCart } from '../hooks'
 
 
 export default () => {
+  const { cart, addToCart } = useCart()
   const { clothes, getClothing } = useClothes()
   useEffect(() => {
     getClothing()
@@ -12,12 +13,15 @@ export default () => {
     <div className="clothesChest">
       {clothes.map(item => {
           return (
-            <div className="item">
-              <img src={item.img.normal} />
-              <h1 className="title">{item.title}</h1>
-              <div>{item.currencyFormat}{item.price}</div>
-              <div>or {item.installments} x${item.price / item.installments}</div>
-              <button className="buy-button">Add to cart</button>
+            <div onClick={() => addToCart(item)} className="item">
+              <div className="Free-Shipping">Free shipping</div>
+              <div className="imageBox">
+                <img src={item.img.normal} />
+              </div>
+              <p className="title">{item.title}</p>
+              <div>{item.currencyFormat}{(item.price).toFixed(2)}</div>
+              <div>or {item.installments} x${(item.price / item.installments).toFixed(2)}</div>
+              <div className="buy-button">Add to cart</div>
             </div>
           )
       })}

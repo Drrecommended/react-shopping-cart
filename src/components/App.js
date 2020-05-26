@@ -7,7 +7,7 @@ import Cart from './Cart.js'
 
 export default () => {
   return (
-    <div>
+    <div className="app">
       <div>
         <ClothingHeader />
         <ClothingItem />
