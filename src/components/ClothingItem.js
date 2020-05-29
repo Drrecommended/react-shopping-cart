@@ -19,8 +19,10 @@ export default () => {
                 <img src={item.img.normal} />
               </div>
               <p className="title">{item.title}</p>
-              <div>{item.currencyFormat}{(item.price).toFixed(2)}</div>
-              <div>or {item.installments} x${(item.price / item.installments).toFixed(2)}</div>
+              <div className="price-shelf">
+                <div>{item.currencyFormat}{(item.price).toFixed(2)}</div>
+                <div className="install">or {item.installments} x${(item.price / item.installments).toFixed(2)}</div>
+              </div>
               <div className="buy-button">Add to cart</div>
             </div>
           )
