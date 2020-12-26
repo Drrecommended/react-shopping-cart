@@ -1,4 +1,4 @@
-.floating-cart {
+/* .floating-cart {
     width: 450px;
     background-color: #1b1a20;
     float: right;
@@ -88,8 +88,8 @@
     cursor: pointer;
     padding: 15px 0px;
     /* transition: background-color 0.2s ease 0s; */
-}
 
+/* 
 .product-quantity-button {
     color: rgb(183, 183, 183);
     background-color: rgb(0, 0, 0);
@@ -139,6 +139,6 @@
     margin-right: 3%;
 } */
 
-.item-thumb img {
+/* .item-thumb img { */
 
-}
+/* } */

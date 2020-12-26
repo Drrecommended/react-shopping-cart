@@ -11,7 +11,6 @@ export default () => {
     }, [])
         return (
             <div className="container-item">
-                <div className="">
                 <div className="item-thumb">
                     <img src={item.img.thumb} />
                 </div>

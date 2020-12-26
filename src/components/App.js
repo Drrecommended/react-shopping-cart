@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
-import "../styles/App.css"
-import ClothingHeader from './ClothingHeader'
-import ClothingItem from './ClothingItem'
-import Cart from './Cart.js'
-
+import React, { useState, useEffect } from "react";
+import "../styles/App.css";
+import ClothingHeader from "./ClothingHeader";
+import ClothingItem from "./ClothingItem";
+import Cart from "./Cart.js";
 
 export default () => {
   return (
@@ -14,6 +13,5 @@ export default () => {
       </div>
       <Cart />
     </div>
-    
-  )
-}
+  );
+};

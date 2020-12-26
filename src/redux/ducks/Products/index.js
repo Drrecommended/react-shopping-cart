@@ -35,9 +35,8 @@ function clothing() {
 // 6. custom hook
 export function useClothes() {
   const dispatch = useDispatch()
-  const clothes = useSelector(appState => {
-    return appState.clothesState.clothingData 
-  }) 
+  const clothes = useSelector(appState => appState.clothesState.clothingData)
+  
 
   const getClothing = () => dispatch(clothing())
   
