@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/Cart.css";
 import { useClothes, useCart } from "../hooks";
 import { GiShoppingCart } from "react-icons/gi/";
@@ -15,7 +15,12 @@ export default () => {
     total,
   } = useCart();
   const { clothes, getClothing } = useClothes();
-  console.log(clothes)
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
+
   useEffect(() => {
     getClothing();
   }, []);
@@ -31,7 +36,7 @@ export default () => {
         </div>
         <div className="cart-container">
           {cart.map((item) => {
-            console.log(cart);
+              console.log(item.price)
             return (
               <div className="container-item">
                 <div
@@ -52,8 +57,7 @@ export default () => {
                 </div>
                 <div className="item.price">
                   <p className="cart-price">
-                    {item.currencyFormat}
-                    {item.price.toFixed(2) * item.quantity}
+                    {formatter.format(item.price * item.quantity)}
                   </p>
                   <div>
                     <button
@@ -65,7 +69,10 @@ export default () => {
                     </button>
                     <button
                       className="product-quantity-button"
-                      onClick={(addToCart) => increaseCartItem(item.id)}
+                      onClick={() => {
+                        increaseCartItem(item.id);
+                        addToCart(item);
+                      }}
                     >
                       +
                     </button>
@@ -78,7 +85,7 @@ export default () => {
         <div className="cart-footer">
           <div className="subtotal">SUBTOTAL</div>
           <div className="price">
-            <p className="cart-total">$ {total.toFixed(2)}</p>
+            <p className="cart-total">{formatter.format(total)}</p>
             <div>or up to {total.installments}</div>
           </div>
           <button className="checkout-button">Checkout</button>

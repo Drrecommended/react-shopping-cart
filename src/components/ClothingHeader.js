@@ -5,13 +5,12 @@ import { useClothes } from '../hooks'
 
 export default ClothingHeader => {
   const { clothes, getClothing } = useClothes()
-  console.log(clothes)
   useEffect(() => {
     getClothing()
   }, [])
   return (
     <div className="clothesBoxHeader">
-      <div class="header">
+      <div className="header">
         <small className="products">
           <span>{clothes.length} Product(s) found.</span>
         </small>
