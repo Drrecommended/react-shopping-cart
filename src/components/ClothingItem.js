@@ -1,20 +1,23 @@
 import React, { useEffect } from "react";
 import "../styles/App.css";
 import { useClothes, useCart } from "../hooks";
+import { ClothingHeader } from "./ClothingHeader";
 
 export default () => {
   const { cart, addToCart } = useCart();
   const { clothes, getClothing } = useClothes();
-  console.log(cart)
   useEffect(() => {
     getClothing();
   }, []);
   return (
     <div className="clothesChest">
       {clothes.map((item) => {
+        console.log(item.isFreeShipping);
         return (
           <div onClick={() => addToCart(item)} className="item">
-            <div className="Free-Shipping">Free shipping</div>
+            <div className={item.isFreeShipping ? "Free-Shipping" : "hidden"}>
+              Free shipping
+            </div>
             <div className="imageBox">
               <img src={item.img.normal} />
             </div>

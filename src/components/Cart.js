@@ -20,7 +20,7 @@ export default () => {
     currency: 'USD',
     minimumFractionDigits: 2
   })
-
+  console.log(cart)
   useEffect(() => {
     getClothing();
   }, []);
@@ -36,7 +36,6 @@ export default () => {
         </div>
         <div className="cart-container">
           {cart.map((item) => {
-              console.log(item.price)
             return (
               <div className="container-item">
                 <div
@@ -71,7 +70,7 @@ export default () => {
                       className="product-quantity-button"
                       onClick={() => {
                         increaseCartItem(item.id);
-                        addToCart(item);
+                        addToCart(item.id)
                       }}
                     >
                       +

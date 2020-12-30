@@ -9,7 +9,7 @@ export default () => {
     <div className="app">
       <div>
         <ClothingHeader />
-        <ClothingItem />
+        <ClothingItem/>
       </div>
       <Cart />
     </div>
