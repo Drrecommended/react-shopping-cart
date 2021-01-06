@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { useClothes, useCart } from "../hooks";
 import { ClothingHeader } from "./ClothingHeader";
 
-export default () => {
+export default (ClothingHeader) => {
   const { cart, addToCart } = useCart();
   const { clothes, getClothing } = useClothes();
   useEffect(() => {
@@ -12,7 +12,6 @@ export default () => {
   return (
     <div className="clothesChest">
       {clothes.map((item) => {
-        console.log(item.isFreeShipping);
         return (
           <div onClick={() => addToCart(item)} className="item">
             <div className={item.isFreeShipping ? "Free-Shipping" : "hidden"}>

@@ -12,7 +12,7 @@ const cartState = {
   cartVisible: false,
 };
 
-console.log(cartState)
+
 
 // 4. reducer
 export default (state = cartState, action) => {
@@ -119,8 +119,7 @@ export function useCart() {
   const increaseCartItem = (item) => dispatch(increaseItem(item));
   const decreaseCartItem = (item) => dispatch(decreaseItem(item));
 
-  const total = cart.reduce((item, newPrice) => item + newPrice.price, 0);
-  console.log(total);
+  const total = cart.reduce((item, newPrice) => item + (newPrice.price * newPrice.quantity), 0);
 
   return {
     cart,

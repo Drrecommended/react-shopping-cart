@@ -14,13 +14,15 @@ export default () => {
     decreaseCartItem,
     total,
   } = useCart();
+
   const { clothes, getClothing } = useClothes();
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2
-  })
-  console.log(cart)
+  
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+  });
+
   useEffect(() => {
     getClothing();
   }, []);
@@ -70,7 +72,6 @@ export default () => {
                       className="product-quantity-button"
                       onClick={() => {
                         increaseCartItem(item.id);
-                        addToCart(item.id)
                       }}
                     >
                       +
