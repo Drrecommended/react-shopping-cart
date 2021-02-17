@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-// import axios from 'axios'
 
 const ADD_CART = "example/ADD_CART";
 const DELETE_ITEM = "example/DELETE_CART";
 const INCREASE_QUANTITY = "example/INCREASE_QUANTITY";
 const DECREASE_QUANTITY = "example/DECREASE_QUANTITY";
+
 
 // 3. initial state
 const cartState = {
@@ -79,7 +79,6 @@ export default (state = cartState, action) => {
   }
 };
 
-// 5. action creators
 function addCart(item) {
   return {
     type: ADD_CART,
