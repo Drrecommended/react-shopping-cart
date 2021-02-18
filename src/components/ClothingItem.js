@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/App.css";
 import { useClothes, useCart } from "../hooks";
-import { ClothingHeader } from "./ClothingHeader";
+import { ClothingHeader } from "./Filter";
 
 export default (ClothingHeader) => {
   const { cart, addToCart } = useCart();

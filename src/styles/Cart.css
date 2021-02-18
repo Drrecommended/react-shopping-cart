@@ -1,148 +1,144 @@
-/* .floating-cart {
-    width: 450px;
-    background-color: #1b1a20;
-    float: right;
-    color: rgb(91, 90, 94);
-    display: block;
-
+.floating-cart {
+  width: 450px;
+  background-color: #1b1a20;
+  float: right;
+  color: rgb(91, 90, 94);
+  display: block;
 }
 
 .cart-close-button {
-    width: 50px;
-    height: 50px;
-    color: rgb(236, 236, 236);
-    background-color: rgb(27, 26, 32);
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: rgb(236, 236, 236);
+  background-color: rgb(27, 26, 32);
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
 }
 
 .container-item {
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    padding: 5%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
 }
 
 .cart-title {
-    color: white;
+  color: white;
 }
 
 .cart-price {
-    color: rgb(234, 191, 0);
+  color: rgb(234, 191, 0);
 }
 
 .cart-total {
-    color: rgb(234, 191, 0);
-    font-size: 22px;
-
+  color: rgb(234, 191, 0);
+  font-size: 22px;
 }
 
 .cart-footer {
-    box-sizing: border-box;
-    width: 100%;
-    height: 200px;
-    background-color: rgb(27, 26, 32);
-    padding: 5%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(27, 26, 32);
+  padding: 5%;
 }
 
 .cart-header {
-    color: rgb(236, 236, 236);
-    box-sizing: border-box;
-    text-align: center;
-    padding: 45px 0px;
+  color: rgb(236, 236, 236);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 45px 0px;
 }
 
 .bag {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% center;
-} 
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% center;
+}
 
 .cart-quantity {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    color: rgb(12, 11, 16);
-    font-weight: 700;
-    font-size: 0.7em;
-    text-align: center;
-    line-height: 18px;
-    background-color: rgb(234, 191, 0);
-    position: absolute;
-    bottom: -8px;
-    right: -4px;
-    border-radius: 50%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: rgb(12, 11, 16);
+  font-weight: 700;
+  font-size: 0.7em;
+  text-align: center;
+  line-height: 18px;
+  background-color: rgb(234, 191, 0);
+  position: absolute;
+  bottom: -8px;
+  right: -4px;
+  border-radius: 50%;
 }
 
 .checkout-button {
-    color: rgb(236, 236, 236);
-    background-color: rgb(12, 11, 16);
-    text-align: center;
-    cursor: pointer;
-    padding: 15px 0px;
-    /* transition: background-color 0.2s ease 0s; */
-/* }
+  color: rgb(236, 236, 236);
+  background-color: rgb(12, 11, 16);
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 0px;
+  transition: background-color 0.2s ease 0s;
+}
 
 .product-quantity-button {
-    color: rgb(183, 183, 183);
-    background-color: rgb(0, 0, 0);
-    width: 25px;
-    height: 25px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
+  color: rgb(183, 183, 183);
+  background-color: rgb(0, 0, 0);
+  width: 25px;
+  height: 25px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
 }
 
 .delete-cart-item {
-    width: 16px;
-    height: 16px;
-    top: 15px;
-    right: 5%;
-    border-radius: 50%;
-    position: absolute;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 15px;
+  right: 5%;
+  border-radius: 50%;
+  position: absolute;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .installments {
-    color: rgb(156, 155, 155);
-
+  color: rgb(156, 155, 155);
 }
 
 .subtotal {
-    width: 20%;
+  width: 20%;
 }
 
 .price {
-    width: 80%;
-    text-align: right;
+  width: 80%;
+  text-align: right;
 }
 
 .item-details {
-    position: relative;
-    box-sizing: border-box;
-    padding: 5%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
 }
-/* 
+
 .item-thumb {
-    vertical-align: middle;
-    width: 15%;
-    margin-right: 3%;
-} */
+  vertical-align: middle;
+  width: 15%;
+  margin-right: 3%;
+}
 
-/* .item-thumb img {
-
-/* } */ 
+.item-thumb img {
+}
 
 .hidden {
-    display: none;
+  display: none;
 }

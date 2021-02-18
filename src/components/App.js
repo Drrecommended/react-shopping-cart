@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/App.css";
-import ClothingHeader from "./ClothingHeader";
+import ClothingHeader from "./Filter";
 import ClothingItem from "./ClothingItem";
 import Cart from "./Cart.js";
 

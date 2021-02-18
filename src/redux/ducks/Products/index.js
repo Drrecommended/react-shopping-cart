@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 
 const GRAB_CLOTHES = "example/GRAB_CLOTHES";
-const SORT_BY_PRICE = "example/SORT_BY_PRICE";
+const SORT_BY_PRICE = "example/SORT_PRICE";
 
 // 3. initial state
 const clothesState = {
@@ -14,16 +14,11 @@ const clothesState = {
 export default (state = clothesState, action) => {
   switch (action.type) {
     case GRAB_CLOTHES:
-      return {
-        ...state,
-        clothingData: action.payload,
-        filteredData: action.payload,
-      };
+      return { ...state, clothingData: action.payload };
     case SORT_BY_PRICE:
       return {
         ...state,
-        filteredData: action.payload.clothingData,
-        sort: action.payload.sort,
+        item: action.payload,
       };
     default:
       return state;
@@ -42,26 +37,10 @@ function clothing() {
   };
 }
 
-function fliterProductBySize(products, sort) {
-  if (sort != "") {
-    products.sort((a, b) =>
-      sort === "lowestprice"
-        ? a.price > b.price
-          ? 1
-          : -1
-        : a.price < b.price
-        ? 1
-        : -1
-    );
-  } else {
-    products.sort((a,b) => a.id > b.id ? 1 : -1)
-  }
+function sortClothingBySize(items) {
   return {
     type: SORT_BY_PRICE,
-    payload: {
-      sort: sort,
-      items: products,
-    },
+    payload: items,
   };
 }
 
@@ -71,9 +50,7 @@ export function useClothes() {
   const clothes = useSelector((appState) => appState.clothesState.clothingData);
 
   const getClothing = () => dispatch(clothing());
-  const sortSize = () => dispatch(fliterProductBySize())
+  // const sortSize = 
 
-  // const total = cart.reduce((item, newPrice) => item + (newPrice.price * newPrice.quantity), 0);
-
-  return { clothes, getClothing, sortSize };
+  return { clothes, getClothing };
 }
